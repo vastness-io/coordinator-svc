@@ -1,14 +1,21 @@
 syntax = "proto3";
 
+import "language.proto";
+
 package project;
 
+message CommitMeta {
+    repeated Language languages = 1;
+}
+
 message Commit {
-    string sha = 1;
-    string message = 2;
-    string timestamp = 3;
-    string author_name = 4;
-    string author_email = 5;
-    repeated string added = 6;
-    repeated string removed = 7;
-    repeated string modified = 8;
+    CommitMeta meta = 1;
+    string sha = 2;
+    string message = 3;
+    string timestamp = 4;
+    string author_name = 5;
+    string author_email = 6;
+    repeated string added = 7;
+    repeated string removed = 8;
+    repeated string modified = 9;
 }

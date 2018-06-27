@@ -11,7 +11,7 @@ message BranchMeta {
 }
 
 message Branch {
-    string name = 1;
-    BranchMeta meta = 2;
+    BranchMeta meta = 1;
+    string name = 2;
     repeated Commit commits = 3;
 }
